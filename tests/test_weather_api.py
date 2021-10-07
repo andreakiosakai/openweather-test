@@ -14,6 +14,32 @@ def test_invalid_api_key_401():
     assert body['cod'] == 401
     assert body['message'] == "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."
 
+def test_delete_method_not_allowed_405():
+    URL = base_url + '/weather?q=London&appid=' + api_key
+    response = requests.delete(URL)
+    assert response.status_code == 405
+    body = response.json()
+    assert body['cod'] == '405'
+    assert body['message'] == 'Internal error'
+
+def test_put_method_not_allowed_405():
+    URL = base_url + '/weather?q=London&appid=' + api_key
+    data = {"name": "CITY_NAME"}
+    response = requests.put(URL,data)
+    assert response.status_code == 405
+    body = response.json()
+    assert body['cod'] == '405'
+    assert body['message'] == 'Internal error'
+
+def test_patch_method_not_allowed_405():
+    URL = base_url + '/weather?q=London&appid=' + api_key
+    data = {"name": "CITY_NAME"}
+    response = requests.patch(URL,data)
+    assert response.status_code == 405
+    body = response.json()
+    assert body['cod'] == '405'
+    assert body['message'] == 'Internal error'
+
 def test_get_by_name_200():
     URL = base_url + '/weather?q=London&appid=' + api_key
     response = requests.get(URL)

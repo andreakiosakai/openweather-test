@@ -136,3 +136,10 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# pytest-html
+assets/
+report/
+
+# Config files
+src/config/config.env

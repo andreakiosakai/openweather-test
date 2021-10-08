@@ -143,3 +143,5 @@ report/
 
 # Config files
 src/config/env.cfg
+
+.DS_Store

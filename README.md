@@ -18,6 +18,7 @@ First of all, please, clone this repo:
 In the root folder, you need to duplicate and rename the env.cfg file:
 
 `cd path/to/project/openweather-test`
+
 `cp src/config/env-template.cfg src/config/env.cfg`
 
 Open the file:

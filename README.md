@@ -31,7 +31,7 @@ Edit this line with your OpenWeather API KEY:
 Example:
 >API_KEY = abc123abc123
 
-#### Running Local with pipenv
+### Running Local with pipenv
 
 Run this command to install dependencies:
 
@@ -45,7 +45,7 @@ Run the tests:
 
 `pytest tests/ --html report/report.html`
 
-#### Running with Docker
+### Running with Docker
 
 Build a Docker image with the following:
 
@@ -55,7 +55,7 @@ To run the tests from Docker, run the following command:
 
 ``docker run -it --rm -v `pwd`:/openweather-test api_test pytest tests/ --html report/report.html``
 
-#### Reports
+### Reports
 
 After the test run, you can see a report file, just open the following file in your browser:
 >report/report.html

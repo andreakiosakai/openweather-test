@@ -16,10 +16,12 @@ First of all, please, clone this repo:
 `git clone git@github.com:andreakiosakai/openweather-test.git`
 
 In the root folder, you need to duplicate and rename the env.cfg file:
+
 `cd path/to/project/openweather-test`
 `cp src/config/env-template.cfg src/config/env.cfg`
 
 Open the file:
+
 `vim src/config/env.cfg`
 
 Edit this line with your OpenWeather API KEY:
@@ -31,12 +33,15 @@ Example:
 #### Running Local with pipenv
 
 Run this command to install dependencies:
+
 `pipenv install`
 
 Open your pipenv environment with the following command:
+
 `pipenv shell`
 
 Run the tests:
+
 `pytest tests/ --html report/report.html`
 
 #### Running with Docker
